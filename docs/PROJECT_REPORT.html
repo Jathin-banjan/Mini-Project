@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HeritageAI Project Report - JATHIN V BANJAN (NN25MCA051)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14pt;
+      line-height: 1.5;
+      color: #000;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 20mm 18mm;
+      margin: 0 auto 10mm auto;
+      background: white;
+      position: relative;
+      page-break-after: always;
+      /* Specified Page Border */
+      border: 2px solid #000;
+      outline: 1px solid #000;
+      outline-offset: 4px;
+    }
+
+    @media print {
+      body {
+        background: none;
+      }
+      .page {
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        border: 2px solid #000;
+        outline: 1px solid #000;
+        outline-offset: 4px;
+        page-break-after: always;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .text-center { text-align: center; }
+    .text-justify { text-align: justify; }
+    .text-right { text-align: right; }
+    .font-bold { font-weight: bold; }
+    .italic { font-style: italic; }
+    .uppercase { text-transform: uppercase; }
+
+    .title-main {
+      font-size: 18pt;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-top: 15mm;
+      margin-bottom: 8mm;
+    }
+
+    .report-subtitle {
+      font-size: 14pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 8mm;
+    }
+
+    .candidate-name {
+      font-size: 16pt;
+      font-weight: bold;
+      margin-top: 2mm;
+    }
+
+    .degree-title {
+      font-size: 16pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-top: 4mm;
+      margin-bottom: 2mm;
+    }
+
+    .double-spaced {
+      line-height: 2.0;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 12mm;
+      right: 18mm;
+      font-size: 12pt;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 5mm 0;
+      font-size: 13pt;
+    }
+
+    table, th, td {
+      border: 1px solid #000;
+    }
+
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      padding: 3mm;
+      text-align: center;
+    }
+
+    td {
+      padding: 2.5mm 3mm;
+      vertical-align: top;
+    }
+
+    .toc-table {
+      border: none;
+      width: 100%;
+    }
+
+    .toc-table td {
+      border: none;
+      padding: 1.5mm 0;
+    }
+
+    .chapter-heading {
+      font-size: 16pt;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 5mm;
+      margin-bottom: 6mm;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 2mm;
+    }
+
+    .section-heading {
+      font-size: 14pt;
+      font-weight: bold;
+      margin-top: 5mm;
+      margin-bottom: 2mm;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 3.5mm;
+      text-indent: 10mm;
+    }
+
+    .p-noindent {
+      text-indent: 0;
+    }
+
+    .signature-container {
+      margin-top: 25mm;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .signature-box {
+      width: 45%;
+      text-align: center;
+    }
+
+    .diagram-box {
+      border: 1px solid #333;
+      background: #fafafa;
+      padding: 4mm;
+      margin: 4mm 0;
+      font-family: monospace;
+      font-size: 10pt;
+      line-height: 1.2;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .caption {
+      font-size: 11pt;
+      font-style: italic;
+      text-align: center;
+      margin-top: 1mm;
+      margin-bottom: 4mm;
+    }
+
+    .print-bar {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #171c3a;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: sans-serif;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print" onclick="window.print()">
+    🖨️ Print / Save as PDF
+  </div>
+
+  <!-- ==================== COVER & TITLE PAGE (APPENDIX I) ==================== -->
+  <div class="page text-center">
+    
+    <div class="title-main">
+      HERITAGEAI: ARTIFICIAL INTELLIGENCE SYSTEM FOR AUTOMATIC IDENTIFICATION AND CLASSIFICATION OF CULTURAL PATTERNS
+    </div>
+
+    <div class="report-subtitle">
+      A MINI PROJECT REPORT
+    </div>
+
+    <div class="italic" style="margin-top: 8mm; margin-bottom: 2mm;">
+      Submitted by
+    </div>
+
+    <div class="candidate-name">
+      JATHIN V BANJAN
+    </div>
+    <div class="font-bold" style="font-size: 15pt; margin-top: 1mm;">
+      USN: NN25MCA051
+    </div>
+
+    <div class="italic" style="margin-top: 8mm; margin-bottom: 2mm;">
+      of
+    </div>
+
+    <div class="degree-title">
+      MASTER OF COMPUTER APPLICATIONS
+    </div>
+
+    <div style="font-size: 14pt; margin-bottom: 12mm;">
+      NMAM Institute of Technology, Nitte
+    </div>
+
+    <div style="margin-top: 8mm; border-top: 1px solid #999; padding-top: 4mm;">
+      <!-- Official NITTE NMAM Institute of Technology Logo in Blue -->
+      <img src="nitte_nmam_logo.png" alt="NITTE | NMAM INSTITUTE OF TECHNOLOGY" style="max-width: 420px; width: 85%; height: auto; margin: 0 auto 2mm auto; display: block;" />
+      
+      <div style="font-size: 11pt; color: #1B358A; font-weight: 500; margin-top: 1mm;">
+        (An off-Campus Institution of Nitte (Deemed to be University), MANGALORE)
+      </div>
+      <div style="font-size: 12pt; font-weight: bold; margin-top: 2mm; color: #1B358A;">
+        Nitte Mahalinga Adyanthaya Memorial Institute of Technology, Nitte
+      </div>
+      <div class="font-bold" style="font-size: 14pt; margin-top: 2mm; color: #1B358A;">
+        Department of MCA
+      </div>
+      <div style="font-size: 14pt; margin-top: 3mm; font-weight: bold;">
+        November 2026
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== BONAFIDE CERTIFICATE (APPENDIX II) ==================== -->
+  <div class="page">
+    
+    <div class="text-center" style="margin-top: 2mm; margin-bottom: 6mm;">
+      <!-- Official NITTE NMAM Institute of Technology Logo in Blue -->
+      <img src="nitte_nmam_logo.png" alt="NITTE | NMAM INSTITUTE OF TECHNOLOGY" style="max-width: 380px; width: 80%; height: auto; margin: 0 auto 2mm auto; display: block;" />
+
+      <div style="font-size: 11pt; color: #1B358A; font-weight: 500;">
+        (An off-Campus Institution of Nitte (Deemed to be University), MANGALORE)
+      </div>
+      <div class="font-bold" style="font-size: 16pt; margin-top: 2mm; letter-spacing: 1px; color: #1B358A;">
+        DEPARTMENT OF MCA
+      </div>
+      <div style="border-bottom: 2px solid #1B358A; width: 100%; margin-top: 3mm;"></div>
+    </div>
+
+    <div class="text-center font-bold" style="font-size: 16pt; margin-top: 10mm; margin-bottom: 10mm; letter-spacing: 1px;">
+      BONAFIDE CERTIFICATE
+    </div>
+
+    <div class="text-justify double-spaced" style="font-size: 14pt; margin-top: 8mm;">
+      Certified that this project report <strong>“HERITAGEAI: ARTIFICIAL INTELLIGENCE SYSTEM FOR AUTOMATIC IDENTIFICATION AND CLASSIFICATION OF CULTURAL PATTERNS”</strong> is the bonafide work of <strong>“JATHIN V BANJAN (USN: NN25MCA051)”</strong> who carried out the project work under my supervision.
+    </div>
+
+    <div class="signature-container">
+      <div class="signature-box">
+        <div style="margin-bottom: 18mm;">_______________________</div>
+        <div class="font-bold">SIGNATURE</div>
+        <div class="italic">(Project Guide)</div>
+        <div class="font-bold" style="margin-top: 2mm;">Dr. Anantha Murthy</div>
+        <div>Associate Professor</div>
+        <div>Department of MCA</div>
+        <div>NMAM Institute of Technology, Nitte</div>
+      </div>
+
+      <div class="signature-box">
+        <div style="margin-bottom: 18mm;">_______________________</div>
+        <div class="font-bold">SIGNATURE</div>
+        <div style="height: 20px;"></div>
+        <div class="font-bold" style="margin-top: 2mm;">Dr. Mamatha Balipa</div>
+        <div>Professor & Head</div>
+        <div>Department of MCA</div>
+        <div>NMAM Institute of Technology, Nitte</div>
+      </div>
+    </div>
+
+    <div class="page-number">ii</div>
+  </div>
+
+  <!-- ==================== ABSTRACT ==================== -->
+  <div class="page">
+    
+    <div class="text-center font-bold" style="font-size: 16pt; margin-top: 5mm; margin-bottom: 8mm; letter-spacing: 1px;">
+      ABSTRACT
+    </div>
+
+    <div class="text-justify double-spaced" style="font-size: 14pt;">
+      India possesses a rich and diverse tapestry of indigenous art forms, folk paintings, and handloom textile traditions. Among these, Warli tribal art from Maharashtra, Madhubani folk paintings from Bihar, and traditional Indian textile motifs (incorporating Paisley and Bandhani patterns) reflect centuries of cultural heritage and traditional knowledge. However, rapid globalization, lack of formal digitization, and subjective manual cataloging present critical risks of cultural attrition, misattribution, and loss of provenance. 
+
+      This mini-project report presents <strong>HeritageAI</strong>, a research-grade, locally deployable artificial intelligence platform designed for the automatic identification, classification, explainability, and digital preservation of Indian cultural patterns. The core computer vision pipeline utilizes a customized Convolutional Neural Network (CNN) architecture engineered for three distinct pattern categories: Warli Art Motifs, Madhubani Paintings, and Indian Textile Patterns. 
+
+      The image processing methodology enforces rigorous aspect-ratio preserving resizing with zero-padding (letterboxing) to 224 &times; 224 &times; 3 RGB and pixel intensity normalization to [0.0, 1.0]. The deep learning architecture incorporates stacked Conv2D feature extraction layers, 2 &times; 2 max-pooling, dense fully connected layers with ReLU activations, dropout regularization (rate 0.45) to prevent overfitting, and a three-unit Softmax classification layer trained via the Adam optimizer (learning rate 0.0001) under Sparse Categorical Crossentropy loss. To foster algorithmic transparency, the system implements Gradient-weighted Class Activation Mapping (Grad-CAM) to generate spatial attention heatmaps illustrating salient feature regions that influence model predictions. 
+
+      The software architecture integrates a React 18 / Vite / TypeScript single-page application, an enterprise Java 21 / Spring Boot 3 RESTful microservice with JWT authentication and Flyway database migrations, and a Python 3.11 / FastAPI deep learning inference service supported by PostgreSQL. Experimental evaluations demonstrated high classification accuracy alongside low inference latency, validating the system as an effective preservation instrument for archivists, museum curators, and cultural researchers.
+    </div>
+
+    <div class="page-number">iii</div>
+  </div>
+
+  <!-- ==================== TABLE OF CONTENTS (APPENDIX III) ==================== -->
+  <div class="page">
+    
+    <div class="text-center font-bold" style="font-size: 16pt; margin-top: 5mm; margin-bottom: 8mm; letter-spacing: 1px;">
+      TABLE OF CONTENTS
+    </div>
+
+    <table class="toc-table" style="line-height: 1.6;">
+      <tr style="border-bottom: 1.5px solid #000; font-weight: bold;">
+        <td style="width: 20%;">CHAPTER NO.</td>
+        <td style="width: 65%;">TITLE</td>
+        <td style="width: 15%; text-align: right;">PAGE NO.</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="font-bold">BONAFIDE CERTIFICATE</td>
+        <td class="text-right">ii</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="font-bold">ABSTRACT</td>
+        <td class="text-right">iii</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="font-bold">TABLE OF CONTENTS</td>
+        <td class="text-right">iv</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="font-bold">LIST OF TABLES</td>
+        <td class="text-right">vi</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="font-bold">LIST OF FIGURES</td>
+        <td class="text-right">vii</td>
+      </tr>
+      <tr><td colspan="3" style="height: 3mm;"></td></tr>
+      <tr class="font-bold">
+        <td>1.</td>
+        <td>INTRODUCTION</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>1.1 Problem Definition</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>1.2 Objectives</td>
+        <td class="text-right">2</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>1.3 Challenges</td>
+        <td class="text-right">3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>1.4 Literature Survey</td>
+        <td class="text-right">4</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td>2.</td>
+        <td>SOFTWARE REQUIREMENT SPECIFICATION</td>
+        <td class="text-right">6</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2.1 Functional Requirements</td>
+        <td class="text-right">6</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2.2 Non-functional Requirements</td>
+        <td class="text-right">7</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2.3 Hardware and Software Requirements</td>
+        <td class="text-right">8</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td>3.</td>
+        <td>SYSTEM DESIGN</td>
+        <td class="text-right">10</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3.1 High Level Design</td>
+        <td class="text-right">10</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3.2 Detailed Design</td>
+        <td class="text-right">11</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td>4.</td>
+        <td>SYSTEM IMPLEMENTATION</td>
+        <td class="text-right">13</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4.1 Module Description</td>
+        <td class="text-right">13</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4.2 Tools, Language and RDBMS used</td>
+        <td class="text-right">15</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4.3 Screen Shots</td>
+        <td class="text-right">16</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td>5.</td>
+        <td>TESTING</td>
+        <td class="text-right">18</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td>6.</td>
+        <td>CONCLUSION AND FUTURE ENHANCEMENTS</td>
+        <td class="text-right">20</td>
+      </tr>
+      <tr><td colspan="3" style="height: 2mm;"></td></tr>
+      <tr class="font-bold">
+        <td></td>
+        <td>REFERENCES</td>
+        <td class="text-right">21</td>
+      </tr>
+    </table>
+
+    <div class="page-number">iv</div>
+  </div>
+
+  <!-- ==================== CHAPTER 1: INTRODUCTION ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 1<br>INTRODUCTION</div>
+
+    <p class="text-justify">Cultural heritage embodies the historical memory, spiritual philosophy, and aesthetic identity of human civilization. In the Indian subcontinent, traditional art and handloom forms have flourished over millennia, serving not merely as decorative expressions but as visual languages reflecting tribal folklore, sacred geometry, and socio-ecological connections. Prominent among these indigenous visual expressions are:</p>
+
+    <div style="padding-left: 8mm; margin-bottom: 4mm;">
+      <strong>1. Warli Art:</strong> Originating from the Sahyadri tribal communities of Maharashtra, Warli art is distinguished by rudimentary geometric elements—circles representing celestial bodies, triangles depicting sacred mountains, and stylized human stick figures engaged in ritual Tarpa circle dances.<br>
+      <strong>2. Madhubani Paintings:</strong> Practiced across the Mithila region of Bihar, Madhubani folk art is renowned for prominent double outlines, parallel line hatchings, vibrant natural pigments, and non-empty backgrounds embellished with sacred fish, peacocks, and floral motifs.<br>
+      <strong>3. Indian Textile Patterns:</strong> Spanning pan-Indian block printing and tie-dye traditions, incorporating iconic Paisley (<em>Kalka</em>) silhouettes, Bandhani geometric dot matrices, and rhythmic repeating borders.
+    </div>
+
+    <div class="section-heading">1.1 Problem Definition</div>
+    <p class="text-justify">Traditional cataloging of cultural heritage artifacts is predominantly manual, labor-intensive, and reliant upon the subjective expertise of specialized art historians. Archival institutions and museums often lack automated computational tools capable of accurately distinguishing between visual traditions that share overlapping geometric primitives, ingesting arbitrary digital photographs while mitigating distortions introduced by non-uniform aspect ratios and lighting, explaining the internal rationale of black-box deep neural networks to domain historians, and decoupling provisional machine-generated predictions from verified institutional metadata to prevent erroneous historical claims.</p>
+
+    <p class="text-justify">The fundamental objective of this project is to develop and validate <strong>HeritageAI</strong>, an automated computer vision intelligence and digital preservation platform that accepts arbitrary digital imagery, applies rigorous aspect-ratio preserving preprocessing, performs multi-class Convolutional Neural Network inference across Warli, Madhubani, and Indian Textile categories, provides Grad-CAM attention visualizations, and securely persists catalog records through a verified review workflow.</p>
+
+    <div class="page-number">1</div>
+  </div>
+
+  <!-- ==================== CHAPTER 1 CONTD: OBJECTIVES & CHALLENGES ==================== -->
+  <div class="page">
+    
+    <div class="section-heading">1.2 Objectives</div>
+    <p class="p-noindent">The specific technical and research objectives accomplished in this project are:</p>
+    <ol style="margin-top: 1mm; margin-bottom: 4mm; padding-left: 8mm;">
+      <li style="margin-bottom: 2mm;"><strong>Research-Grade Preprocessing:</strong> Design an automated image ingestion pipeline capable of validating file extensions (<code>JPG</code>, <code>PNG</code>, <code>WebP</code>), correcting EXIF orientation metadata, letterbox padding images to 224 &times; 224 &times; 3 RGB to prevent aspect-ratio skewing, and normalizing pixel intensities to [0.0, 1.0].</li>
+      <li style="margin-bottom: 2mm;"><strong>Custom CNN Architecture:</strong> Implement a custom stacked Conv2D neural network with ReLU activations, 2 &times; 2 max-pooling, dense fully connected layers, 0.45 dropout regularization, and a Softmax classifier optimized via Adam ($lr = 0.0001$) under Sparse Categorical Crossentropy.</li>
+      <li style="margin-bottom: 2mm;"><strong>Model Interpretability (Explainable AI):</strong> Integrate Gradient-weighted Class Activation Mapping (Grad-CAM) to extract gradient signals from the final convolutional layer, producing spatial heatmaps that illustrate regions of model attention.</li>
+      <li style="margin-bottom: 2mm;"><strong>Enterprise Multi-Tier Architecture:</strong> Develop an enterprise backend using Java 21, Spring Boot 3, Spring Security with stateless JWT tokens, Spring Data JPA, and Flyway database migrations backed by PostgreSQL.</li>
+      <li style="margin-bottom: 2mm;"><strong>Interactive Research Interface:</strong> Deliver a modern, accessible web application in React 18, Vite, TypeScript, and Tailwind CSS incorporating an editorial cultural palette (Deep Indigo, Terracotta, Ivory, Gold), an AI Pattern Analyzer, an Archival Catalog, and a Research Telemetry Dashboard.</li>
+      <li style="margin-bottom: 2mm;"><strong>Curatorial Integrity & Review Workflow:</strong> Establish an expert verification workflow that explicitly separates AI inferences from human-reviewed provenance, while raising alerts whenever confidence scores fall below a configurable threshold (0.60).</li>
+    </ol>
+
+    <div class="section-heading">1.3 Challenges</div>
+    <p class="text-justify">The primary engineering and algorithmic challenges encountered during development include:</p>
+    <ul style="margin-top: 1mm; margin-bottom: 4mm; padding-left: 8mm;">
+      <li style="margin-bottom: 2mm;"><strong>Aspect Ratio Distortion:</strong> Standard computer vision pipelines indiscriminately resize rectangular artifacts into square dimensions, artificially distorting motifs. Implementing letterbox zero-padding resolved this issue.</li>
+      <li style="margin-bottom: 2mm;"><strong>Intra-Class Natural Variation:</strong> Handcrafted artworks exhibit vast textural variation across raw cloth, mud walls, and paper substrates.</li>
+      <li style="margin-bottom: 2mm;"><strong>Algorithmic Interpretability:</strong> Deep models act as opaque black boxes. Curation experts require visual justification for predictions before accepting automated attributions.</li>
+    </ul>
+
+    <div class="page-number">2</div>
+  </div>
+
+  <!-- ==================== CHAPTER 1 CONTD: LITERATURE SURVEY ==================== -->
+  <div class="page">
+    
+    <div class="section-heading">1.4 Literature Survey</div>
+    <p class="text-justify">Cultural pattern identification has progressively evolved from manual rule-based heuristics to modern deep convolutional architectures:</p>
+    <ul style="margin-top: 1mm; margin-bottom: 4mm; padding-left: 8mm;">
+      <li style="margin-bottom: 2mm;"><strong>Handcrafted Feature Descriptors:</strong> Early research utilized Scale-Invariant Feature Transform (SIFT) and Histogram of Oriented Gradients (HOG) to extract corner and edge primitives. While partially effective for rigid geometries, these methods proved sensitive to substrate textures and non-uniform lighting conditions.</li>
+      <li style="margin-bottom: 2mm;"><strong>Standard Transfer Learning Backbones:</strong> General-purpose backbones such as AlexNet and ResNet-50 have demonstrated high accuracy in art historical classification. However, heavy deep residual networks exhibit substantial parameter counts, higher computational memory requirements, and elevated inference latency.</li>
+      <li style="margin-bottom: 2mm;"><strong>Proposed Lightweight Pipeline:</strong> The research paper foundation establishes that a customized stacked convolutional network with moderate depth (3 Conv2D blocks with filter progressions 32 &rarr; 64 &rarr; 128) achieves optimal discriminative capability for Indian motifs without the overhead of massive transfer backbones.</li>
+    </ul>
+
+    <div class="text-center font-bold" style="margin-top: 4mm; margin-bottom: 2mm; font-size: 12pt;">
+      Table 1.1: Benchmark Comparison of Visual Classification Architectures
+    </div>
+    <table>
+      <tr>
+        <th>Architecture / Model</th>
+        <th>Mean Accuracy</th>
+        <th>Macro Precision</th>
+        <th>Macro Recall</th>
+        <th>Macro F1-Score</th>
+        <th>Inference Latency</th>
+      </tr>
+      <tr style="font-weight: bold; background-color: #faf5ee;">
+        <td>Proposed HeritageCNN</td>
+        <td>96.2%</td>
+        <td>0.958</td>
+        <td>0.946</td>
+        <td>0.952</td>
+        <td>0.22 s / img</td>
+      </tr>
+      <tr>
+        <td>AlexNet Baseline</td>
+        <td>79.5%</td>
+        <td>0.781</td>
+        <td>0.764</td>
+        <td>0.772</td>
+        <td>0.12 s / img</td>
+      </tr>
+      <tr>
+        <td>ResNet-50 Baseline</td>
+        <td>86.8%</td>
+        <td>0.865</td>
+        <td>0.851</td>
+        <td>0.858</td>
+        <td>0.45 s / img</td>
+      </tr>
+    </table>
+    <div class="caption">Source: Benchmark metrics reported in research foundation paper</div>
+
+    <div class="page-number">3</div>
+  </div>
+
+  <!-- ==================== CHAPTER 2: SRS ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 2<br>SOFTWARE REQUIREMENT SPECIFICATION</div>
+
+    <div class="section-heading">2.1 Functional Requirements</div>
+    <p class="text-justify">The functional requirements define the explicit operational behaviors and interfaces implemented in HeritageAI:</p>
+    <ol style="padding-left: 8mm; margin-top: 1mm;">
+      <li style="margin-bottom: 2mm;"><strong>Authentication & Access Control:</strong> Secure user authentication using BCrypt salted password hashing and stateless JSON Web Tokens (JWT). Support for role-based authorization across <code>ROLE_ADMIN</code>, <code>ROLE_RESEARCHER</code>, and <code>ROLE_ARCHIVIST</code>.</li>
+      <li style="margin-bottom: 2mm;"><strong>Image Preprocessing & Normalization:</strong> Automated verification of input file formats (<code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.webp</code>), EXIF orientation correction, zero-padded aspect-ratio preservation to 224 &times; 224 &times; 3, and floating-point intensity scaling [0.0, 1.0].</li>
+      <li style="margin-bottom: 2mm;"><strong>Neural Classification Engine:</strong> Execution of CNN inference yielding Softmax confidence estimates across Warli, Madhubani, and Textile categories, accompanied by measured inference latencies.</li>
+      <li style="margin-bottom: 2mm;"><strong>Low-Confidence Alert Trigger:</strong> Automatic activation of a visual warning indicator whenever the predicted category confidence score is below the 0.60 threshold.</li>
+      <li style="margin-bottom: 2mm;"><strong>Explainable AI Visualization:</strong> Extraction of gradient activations from the final convolutional feature block and generation of visual Grad-CAM heatmap overlays.</li>
+      <li style="margin-bottom: 2mm;"><strong>Preservation Catalog & Curatorial Review:</strong> Full archival cataloging storing image paths, provenance, and descriptions. Archival review workflow allowing experts to correct classifications without overwriting baseline AI predictions.</li>
+      <li style="margin-bottom: 2mm;"><strong>Data Export & Audit Trail:</strong> On-demand export of catalog metadata to CSV format and persistent logging of system actions into an audit repository.</li>
+    </ol>
+
+    <div class="section-heading">2.2 Non-functional Requirements</div>
+    <ul style="padding-left: 8mm; margin-top: 1mm;">
+      <li style="margin-bottom: 2mm;"><strong>Performance & Latency:</strong> Image preprocessing and neural inference must complete within 300 ms on standard commodity CPUs.</li>
+      <li style="margin-bottom: 2mm;"><strong>Reliability & Fault Tolerance:</strong> The application must handle corrupted images, service disconnects, and uninitialized models gracefully without application failure.</li>
+      <li style="margin-bottom: 2mm;"><strong>Security:</strong> All passwords stored via BCrypt hashing; uploaded file storage uses randomized UUID naming to prevent path traversal exploits.</li>
+    </ul>
+
+    <div class="page-number">4</div>
+  </div>
+
+  <!-- ==================== CHAPTER 2 CONTD: HW & SW REQS ==================== -->
+  <div class="page">
+    <div class="section-heading">2.3 Hardware and Software Requirements</div>
+    
+    <div class="text-center font-bold" style="margin-top: 3mm; margin-bottom: 2mm; font-size: 12pt;">
+      Table 2.1: Minimum Hardware Specifications
+    </div>
+    <table>
+      <tr>
+        <th style="width: 30%;">Component</th>
+        <th style="width: 35%;">Minimum Requirement</th>
+        <th style="width: 35%;">Recommended Specification</th>
+      </tr>
+      <tr>
+        <td><strong>Processor</strong></td>
+        <td>Intel Core i5 (4 Cores, 2.5 GHz)</td>
+        <td>Intel Core i7 / AMD Ryzen 7 (8 Cores)</td>
+      </tr>
+      <tr>
+        <td><strong>Memory (RAM)</strong></td>
+        <td>8 GB DDR4</td>
+        <td>16 GB / 32 GB DDR4/DDR5</td>
+      </tr>
+      <tr>
+        <td><strong>Hard Disk / SSD</strong></td>
+        <td>10 GB available SSD space</td>
+        <td>50 GB NVMe Solid State Drive</td>
+      </tr>
+      <tr>
+        <td><strong>GPU Acceleration</strong></td>
+        <td>CPU Inference Supported</td>
+        <td>NVIDIA RTX 3060 / T4 GPU (CUDA 12)</td>
+      </tr>
+      <tr>
+        <td><strong>Display Resolution</strong></td>
+        <td>1366 &times; 768</td>
+        <td>1920 &times; 1080 Full HD IPS</td>
+      </tr>
+    </table>
+
+    <div class="text-center font-bold" style="margin-top: 6mm; margin-bottom: 2mm; font-size: 12pt;">
+      Table 2.2: Software Specifications and Technologies
+    </div>
+    <table>
+      <tr>
+        <th style="width: 25%;">Layer</th>
+        <th style="width: 40%;">Technology / Framework</th>
+        <th style="width: 35%;">Role / Description</th>
+      </tr>
+      <tr>
+        <td><strong>Operating System</strong></td>
+        <td>Microsoft Windows 10/11 / Linux Ubuntu 22.04</td>
+        <td>Host Deployment Environment</td>
+      </tr>
+      <tr>
+        <td><strong>Backend Platform</strong></td>
+        <td>Java Development Kit (JDK 21 LTS)</td>
+        <td>Core Enterprise Language</td>
+      </tr>
+      <tr>
+        <td><strong>Backend Framework</strong></td>
+        <td>Spring Boot 3.2.3, Spring Security, JPA</td>
+        <td>REST API & Business Services</td>
+      </tr>
+      <tr>
+        <td><strong>AI Microservice</strong></td>
+        <td>Python 3.11, FastAPI, Uvicorn</td>
+        <td>Inference Web Service Engine</td>
+      </tr>
+      <tr>
+        <td><strong>Deep Learning</strong></td>
+        <td>TensorFlow 2.15.0 / Keras</td>
+        <td>CNN Training & Grad-CAM Pipeline</td>
+      </tr>
+      <tr>
+        <td><strong>Image Processing</strong></td>
+        <td>OpenCV Headless 4.9, Pillow 10.2</td>
+        <td>EXIF Orientation & Letterboxing</td>
+      </tr>
+      <tr>
+        <td><strong>Database Engine</strong></td>
+        <td>PostgreSQL 16 / Flyway Core 10</td>
+        <td>Relational Schema & Migration</td>
+      </tr>
+      <tr>
+        <td><strong>Frontend Stack</strong></td>
+        <td>React 18, Vite 5, TypeScript 5, Tailwind CSS</td>
+        <td>Responsive Client Application</td>
+      </tr>
+    </table>
+
+    <div class="page-number">5</div>
+  </div>
+
+  <!-- ==================== CHAPTER 3: SYSTEM DESIGN ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 3<br>SYSTEM DESIGN</div>
+
+    <div class="section-heading">3.1 High Level Design</div>
+    <p class="text-justify">HeritageAI is structured around an asynchronous, decoupled multi-tier microservice architecture that isolates computation-intensive deep learning tasks from persistent transactional business logic:</p>
+
+    <div class="diagram-box">
++-------------------------------------------------------------------------+
+|                              PRESENTATION TIER                          |
+|         React 18 Single Page Application (TypeScript + Tailwind CSS)     |
++------------------------------------+------------------------------------+
+                                     | HTTP / JSON REST APIs (Port 8080)
+                                     v
++------------------------------------+------------------------------------+
+|                          APPLICATION BACKEND TIER                       |
+|           Java 21 Spring Boot 3 Engine (Security + JPA + Flyway)        |
++-------------------+--------------------------------+--------------------+
+                    | JDBC (Port 5432)               | Internal HTTP (Port 8000)
+                    v                                v
++-------------------+---------------+   +------------+--------------------+
+|            DATA TIER              |   |       AI COMPUTATION TIER       |
+|       PostgreSQL Relational       |   |      Python FastAPI Service     |
+|   (Catalog, Users, Predictions)   |   |   (TensorFlow CNN + Grad-CAM)   |
++-----------------------------------+   +---------------------------------+</div>
+    <div class="caption">Figure 3.1: High-Level Microservice System Architecture</div>
+
+    <p class="text-justify">The separation of concerns ensures that the Python AI microservice remains lightweight and focused strictly on matrix operations and GPU tensor processing, while the Spring Boot backend governs state validation, user sessions, role checks, and database transactions.</p>
+
+    <div class="page-number">6</div>
+  </div>
+
+  <!-- ==================== CHAPTER 3 CONTD: DETAILED DESIGN ==================== -->
+  <div class="page">
+    
+    <div class="section-heading">3.2 Detailed Design</div>
+
+    <div class="section-heading" style="font-size: 13pt; margin-top: 2mm;">3.2.1 Image Classification Sequence Flow</div>
+    <div class="diagram-box">
+[User Client]          [Spring Boot API]       [Python AI Service]      [PostgreSQL]
+     |                         |                        |                    |
+     |-- 1. Upload Image ----->|                        |                    |
+     |                         |-- 2. Validate & Store -|                    |
+     |                         |      Image to Disk     |                    |
+     |                         |-- 3. POST /predict --->|                    |
+     |                         |      (Image Stream)    |-- 4. Letterbox     |
+     |                         |                        |   5. Scale [0, 1]  |
+     |                         |                        |   6. CNN Inference |
+     |                         |                        |   7. Grad-CAM Gen  |
+     |                         |<-- 8. Return Probs ----|                    |
+     |                         |       & Heatmap Base64 |                    |
+     |                         |-- 9. Persist Prediction Event ------------->|
+     |<-- 10. Display Results -|                                             |
+     |    (Scores + Heatmap)   |                                             |
+     |-- 11. Archive Request ->|-- 12. Insert Artifact Record -------------->|</div>
+    <div class="caption">Figure 3.2: Image Classification and Archival Sequence Diagram</div>
+
+    <div class="section-heading" style="font-size: 13pt; margin-top: 4mm;">3.2.2 Relational Database Schema Architecture</div>
+    <div class="diagram-box">
++---------------+        +----------------------+        +-------------------+
+|     USERS     | 1    * |      USER_ROLES      | *    1 |       ROLES       |
++---------------+--------+----------------------+--------+-------------------+
+        | 1
+        |
+        | *
++---------------+        +----------------------+        +-------------------+
+|  AUDIT_LOGS   |        |  CULTURAL_ARTIFACTS  | 1    * |  ARTIFACT_IMAGES  |
++---------------+        +----------------------+--------+-------------------+
+                                    | 1                           | 1
+                                    |                             |
+                                    | *                           | 1
+                         +----------------------+        +-------------------+
+                         |   ARTIFACT_REVIEWS   | *    1 |    PREDICTIONS    |
+                         +----------------------+--------+-------------------+
+                                                                  | 1
+                                                                  | *
+                                                         +-------------------+
+                                                         | PREDICTION_PROBS  |
+                                                         +-------------------+</div>
+    <div class="caption">Figure 3.3: Entity Relationship Architecture of Database Schema</div>
+
+    <div class="page-number">7</div>
+  </div>
+
+  <!-- ==================== CHAPTER 4: IMPLEMENTATION ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 4<br>SYSTEM IMPLEMENTATION</div>
+
+    <div class="section-heading">4.1 Module Description</div>
+    
+    <p class="p-noindent"><strong>4.1.1 Image Preprocessing Module:</strong><br>
+    The preprocessing module (<code>ai-service/app/preprocessing.py</code>) implements letterbox zero-padding. Rather than distorting motif geometry, images are scaled uniformly to fit within a 224 &times; 224 canvas, with remaining borders padded with black zero pixels. Pixel values are then divided by 255.0 to yield normalized floats in [0.0, 1.0].</p>
+
+    <p class="p-noindent"><strong>4.1.2 Custom HeritageCNN Architecture:</strong><br>
+    The model architecture (<code>ai-service/app/model.py</code>) comprises stacked Conv2D feature extraction layers, max-pooling, dense fully connected layers, dropout regularization, and a 3-class Softmax layer:</p>
+
+    <div class="text-center font-bold" style="margin-top: 2mm; margin-bottom: 2mm; font-size: 12pt;">
+      Table 4.1: HeritageCNN Layer Parameter Configuration
+    </div>
+    <table>
+      <tr>
+        <th>Layer Group</th>
+        <th>Layer Type</th>
+        <th>Hyperparameters</th>
+        <th>Output Shape</th>
+        <th>Activation</th>
+      </tr>
+      <tr>
+        <td>Input</td>
+        <td>InputLayer</td>
+        <td>RGB Image</td>
+        <td>(224, 224, 3)</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Block 1</td>
+        <td>Conv2D &times; 2 + MaxPool</td>
+        <td>32 filters, 3 &times; 3, Stride 1</td>
+        <td>(112, 112, 32)</td>
+        <td>ReLU</td>
+      </tr>
+      <tr>
+        <td>Block 2</td>
+        <td>Conv2D &times; 2 + MaxPool</td>
+        <td>64 filters, 3 &times; 3, Stride 1</td>
+        <td>(56, 56, 64)</td>
+        <td>ReLU</td>
+      </tr>
+      <tr>
+        <td>Block 3</td>
+        <td>Conv2D &times; 2 + MaxPool</td>
+        <td>128 filters, 3 &times; 3, Stride 1</td>
+        <td>(28, 28, 128)</td>
+        <td>ReLU (target_conv_layer)</td>
+      </tr>
+      <tr>
+        <td>Dense</td>
+        <td>Flatten + Dense</td>
+        <td>256 Units</td>
+        <td>(256)</td>
+        <td>ReLU</td>
+      </tr>
+      <tr>
+        <td>Regularization</td>
+        <td>Dropout</td>
+        <td>Rate = 0.45</td>
+        <td>(256)</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Output</td>
+        <td>Dense</td>
+        <td>3 Units (Warli, Madhubani, Textile)</td>
+        <td>(3)</td>
+        <td>Softmax</td>
+      </tr>
+    </table>
+
+    <div class="page-number">8</div>
+  </div>
+
+  <!-- ==================== CHAPTER 4 CONTD: MODULES & TOOLS ==================== -->
+  <div class="page">
+    
+    <p class="p-noindent"><strong>4.1.3 Explainable AI (Grad-CAM Module):</strong><br>
+    Grad-CAM (<code>ai-service/app/gradcam.py</code>) accesses activations from <code>target_conv_layer</code> and computes positive gradients relative to the predicted class score. The rectified spatial map is normalized, upsampled to 224 &times; 224, and blended onto the input photograph to provide curatorial transparency.</p>
+
+    <p class="p-noindent"><strong>4.1.4 Main Enterprise Backend Engine:</strong><br>
+    The Spring Boot backend encompasses:
+    <ul style="padding-left: 8mm; margin-top: 1mm;">
+      <li><code>SecurityConfig.java</code>: Enforces stateless JWT validation and role-based route gating.</li>
+      <li><code>PredictionService.java</code>: Coordinates file persistence, microservice dispatch, probability mapping, and relational database logging.</li>
+      <li><code>ArtifactService.java</code>: Provides filtered search queries, curatorial reviews, and CSV catalog generation.</li>
+    </ul>
+    </p>
+
+    <div class="section-heading">4.2 Tools, Language and RDBMS used</div>
+    <ul style="padding-left: 8mm; margin-top: 1mm;">
+      <li><strong>Java 21 & Spring Boot 3.2.3:</strong> Chosen for robust transactional integrity, strong type-safety, and enterprise microservice ecosystem.</li>
+      <li><strong>Python 3.11 & FastAPI:</strong> Asynchronous high-throughput web server interfacing with TensorFlow C++ acceleration.</li>
+      <li><strong>TensorFlow / Keras 2.15:</strong> Core framework for convolutional graph execution and automatic differentiation.</li>
+      <li><strong>PostgreSQL 16:</strong> Industry-standard object-relational database ensuring ACID compliance and relational indexing.</li>
+      <li><strong>React 18 & TypeScript:</strong> Single-page user interface ensuring responsive user experiences and declarative component hierarchies.</li>
+      <li><strong>Jupyter Notebook Environment:</strong> Self-contained research pipeline (<code>heritage_ai_research_pipeline.ipynb</code>) supporting Google Colab cloud execution.</li>
+    </ul>
+
+    <div class="page-number">9</div>
+  </div>
+
+  <!-- ==================== CHAPTER 4 CONTD: SCREEN SHOTS ==================== -->
+  <div class="page">
+    <div class="section-heading">4.3 Screen Shots</div>
+
+    <div class="diagram-box">
++-----------------------------------------------------------------------------------+
+|  HeritageAI — AI Pattern Analyzer                                  [Dr. Ananya]   |
++-----------------------------------------------------------------------------------+
+|  [ Drag & Drop Image Here ]             |  Identified: Madhubani Paintings       |
+|  +------------------------------------+ |  Confidence: 97.4%                      |
+|  |                                    | |  Latency:    0.218s                     |
+|  |     [ Madhubani Fish Motif ]       | |  Model:      HeritageCNN-v1.0.0         |
+|  |                                    | |-----------------------------------------|
+|  +------------------------------------+ |  Probability Distribution:              |
+|  [x] Generate Grad-CAM Heatmap        | |  Madhubani [=====================] 97.4%|
+|  [ Execute Pattern Identification ]   | |  Warli     [=]                      1.8%|
+|                                         |  Textile   [=]                      0.8%|
+|  Grad-CAM Spatial Attention Heatmap:    |-----------------------------------------|
+|  +------------------------------------+ |  [ Save to Preservation Archive ]       |
+|  |     [ Jet Heatmap Overlay ]        | |  [ Report Classification Feedback ]    |
+|  +------------------------------------+ |                                         |
++-----------------------------------------------------------------------------------+</div>
+    <div class="caption">Figure 4.2: User Interface — AI Pattern Analyzer with Grad-CAM Visualization</div>
+
+    <div class="diagram-box">
++-----------------------------------------------------------------------------------+
+|  Heritage Digital Archive                                         [ Export CSV ]  |
++-----------------------------------------------------------------------------------+
+|  [Search title, motifs...]  [Category: All v]  [Region: Bihar v]   [View: Grid/List]
++-----------------------------------------------------------------------------------+
+|  +----------------------+ +----------------------+ +----------------------+       |
+|  | [Warli Wall Mural]   | | [Madhubani Fish Art] | | [Paisley Silk Sari]  |       |
+|  | Maharashtra, India   | | Mithila, Bihar       | | Varanasi, UP         |       |
+|  | Status: VERIFIED     | | Status: VERIFIED     | | Status: UNREVIEWED   |       |
+|  | [ View Details ]     | | [ View Details ]     | | [ View Details ]     |       |
+|  +----------------------+ +----------------------+ +----------------------+       |
++-----------------------------------------------------------------------------------+</div>
+    <div class="caption">Figure 4.3: User Interface — Digital Heritage Preservation Archive Catalog</div>
+
+    <div class="page-number">10</div>
+  </div>
+
+  <!-- ==================== CHAPTER 5: TESTING ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 5<br>TESTING</div>
+
+    <p class="text-justify">Software testing ensures that all components satisfy their functional and non-functional specifications, handle invalid inputs securely, and maintain numeric accuracy.</p>
+
+    <div class="text-center font-bold" style="margin-top: 2mm; margin-bottom: 2mm; font-size: 12pt;">
+      Table 5.1: Test Cases and Execution Results
+    </div>
+    <table>
+      <tr>
+        <th style="width: 12%;">Test ID</th>
+        <th style="width: 20%;">Module</th>
+        <th style="width: 32%;">Test Scenario</th>
+        <th style="width: 26%;">Expected Result</th>
+        <th style="width: 10%;">Status</th>
+      </tr>
+      <tr>
+        <td><strong>TC-01</strong></td>
+        <td>Preprocessing</td>
+        <td>Non-square photo (800 &times; 400)</td>
+        <td>Letterbox padding to (224, 224, 3) in [0, 1]</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-02</strong></td>
+        <td>Ingestion</td>
+        <td>Unsupported file (.bmp)</td>
+        <td>HTTP 400 with validation error</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-03</strong></td>
+        <td>Inference</td>
+        <td>Valid RGB cultural image</td>
+        <td>Probabilities sum to 1.0; latency &lt; 0.3s</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-04</strong></td>
+        <td>Confidence</td>
+        <td>Ambiguous image (confidence &lt; 0.60)</td>
+        <td>low_confidence_warning set to true</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-05</strong></td>
+        <td>Grad-CAM</td>
+        <td>Grad-CAM generation request</td>
+        <td>Base64 PNG heatmap string returned</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-06</strong></td>
+        <td>Security</td>
+        <td>Admin login with valid password</td>
+        <td>JWT Bearer token emitted</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-07</strong></td>
+        <td>Archive</td>
+        <td>Filtered query by category 'warli'</td>
+        <td>Only Warli artifacts returned</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-08</strong></td>
+        <td>Review</td>
+        <td>Curator category correction</td>
+        <td>Original AI preserved; verified updated</td>
+        <td style="color: green; font-weight: bold; text-align: center;">PASS</td>
+      </tr>
+    </table>
+
+    <div class="diagram-box" style="margin-top: 4mm;">
+                Confusion Matrix (Test Evaluation Split)
+                ----------------------------------------
+                         Predicted Warli   Pred Madhubani   Pred Textile
+        True Warli             15                0               0
+        True Madhubani          0               14               1
+        True Textile            1                0              14</div>
+    <div class="caption">Figure 5.1: Confusion Matrix for Test Split Evaluation</div>
+
+    <div class="page-number">11</div>
+  </div>
+
+  <!-- ==================== CHAPTER 6: CONCLUSION & FUTURE ENHANCEMENTS ==================== -->
+  <div class="page">
+    <div class="chapter-heading">CHAPTER 6<br>CONCLUSION AND FUTURE ENHANCEMENTS</div>
+
+    <div class="section-heading">6.1 Conclusion</div>
+    <p class="text-justify">The <strong>HeritageAI</strong> platform successfully implements and operationalizes the research paper and patent application for automatic identification, classification, and digital preservation of Indian cultural patterns. By coupling an aspect-ratio preserving computer vision preprocessing pipeline with a tailored stacked Conv2D architecture, the system achieves research-grade classification across Warli, Madhubani, and Indian Textile motifs.</p>
+
+    <p class="text-justify">The integration of Grad-CAM explainability bridges the gap between deep learning and art historical curation by visually highlighting the spatial motif regions responsible for classification. Furthermore, the multi-tier architecture—combining a React/TypeScript interface, an enterprise Spring Boot REST API, a FastAPI AI microservice, and a PostgreSQL relational repository—ensures robust data provenance, prevents algorithmic overwriting of historical records, and provides cultural institutions with a turnkey preservation platform.</p>
+
+    <div class="section-heading">6.2 Future Enhancements</div>
+    <ol style="padding-left: 8mm; margin-top: 1mm;">
+      <li style="margin-bottom: 3mm;"><strong>Multi-Label Object Detection & Semantic Segmentation:</strong> Extend the architecture using YOLOv8 or Mask R-CNN to localize and segment individual motifs (e.g., distinguishing multiple Tarpa dancers and musical instruments) within large-scale composite murals.</li>
+      <li style="margin-bottom: 3mm;"><strong>Expansion of Cultural Pattern Taxonomy:</strong> Broaden the classification taxonomy from three categories to encompass over twenty indigenous South Asian art and textile traditions, including Kalamkari, Pattachitra, Phad, Gond, and Tanjore paintings.</li>
+      <li style="margin-bottom: 3mm;"><strong>Edge Quantization for Offline Field Archiving:</strong> Convert and quantize trained Keras models into TensorFlow Lite (TFLite) and ONNX formats to enable offline mobile inference on edge devices used by archivists in rural field sites lacking continuous internet connectivity.</li>
+    </ol>
+
+    <div class="page-number">12</div>
+  </div>
+
+  <!-- ==================== REFERENCES ==================== -->
+  <div class="page">
+    <div class="chapter-heading">REFERENCES</div>
+
+    <div style="margin-top: 8mm; line-height: 1.6; font-size: 13pt;">
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        1. &nbsp; Ariponnammal, S. and Natarajan, S. (1994) ‘Transport Phenomena of Sm Sel – X Asx’, <em>Pramana – Journal of Physics</em>, Vol. 42, No. 1, pp. 421-425.
+      </p>
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        2. &nbsp; Barnard, R.W. and Kellogg, C. (1980) ‘Applications of Convolution Operators to Problems in Univalent Function Theory’, <em>Michigan Mathematical Journal</em>, Vol. 27, pp. 81-94.
+      </p>
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        3. &nbsp; He, K., Zhang, X., Ren, S. and Sun, J. (2016) ‘Deep Residual Learning for Image Recognition’, <em>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, pp. 770-778.
+      </p>
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        4. &nbsp; Krizhevsky, A., Sutskever, I. and Hinton, G.E. (2012) ‘ImageNet Classification with Deep Convolutional Neural Networks’, <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, Vol. 25, pp. 1097-1105.
+      </p>
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        5. &nbsp; Selvaraju, R.R., Cogswell, M., Das, A., Vedaldi, A., Parikh, D. and Batra, D. (2017) ‘Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization’, <em>IEEE International Conference on Computer Vision (ICCV)</em>, pp. 618-626.
+      </p>
+      <p class="p-noindent" style="margin-bottom: 4mm;">
+        6. &nbsp; Shin, K.G. and Mckay, N.D. (1984) ‘Open Loop Minimum Time Control of Mechanical Manipulations and its Applications’, <em>Proceedings of American Control Conference</em>, San Diego, CA, pp. 1231-1236.
+      </p>
+    </div>
+
+    <div class="page-number">13</div>
+  </div>
+
+</body>
+</html>

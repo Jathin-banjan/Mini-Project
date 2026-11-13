@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 220" width="100%" height="auto">
+  <defs>
+    <style>
+      .blue-text { fill: #1B358A; font-family: 'Arial', 'Helvetica', sans-serif; font-weight: bold; }
+      .sub-text { fill: #1B358A; font-family: 'Arial', 'Helvetica', sans-serif; font-weight: normal; font-size: 20px; }
+    </style>
+  </defs>
+  <!-- Shield with N -->
+  <rect x="15" y="20" width="130" height="170" rx="30" fill="#1B358A" />
+  <rect x="22" y="27" width="116" height="156" rx="24" fill="none" stroke="#FFFFFF" stroke-width="4" />
+  <text x="47" y="148" font-family="'Arial', 'Helvetica', sans-serif" font-size="105" font-weight="bold" fill="#FFFFFF">N</text>
+
+  <!-- NITTE Text -->
+  <text x="180" y="105" class="blue-text" font-size="68" letter-spacing="1">NITTE</text>
+  <text x="182" y="145" class="sub-text">(Deemed to be University)</text>
+
+  <!-- Divider -->
+  <line x1="475" y1="30" x2="475" y2="185" stroke="#B0B5C0" stroke-width="3" />
+
+  <!-- NMAM INSTITUTE OF TECHNOLOGY -->
+  <text x="510" y="95" class="blue-text" font-size="46" letter-spacing="0.5">NMAM INSTITUTE</text>
+  <text x="510" y="150" class="blue-text" font-size="46" letter-spacing="0.5">OF TECHNOLOGY</text>
+</svg>

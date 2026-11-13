@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: heritageai-postgres
+    environment:
+      POSTGRES_DB: heritageai_db
+      POSTGRES_USER: heritage_user
+      POSTGRES_PASSWORD: heritage_secure_pass_123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U heritage_user -d heritageai_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  ai-service:
+    build:
+      context: ./ai-service
+      dockerfile: Dockerfile
+    container_name: heritageai-ai-service
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - MODEL_PATH=models/heritage_cnn_v1.h5
+    volumes:
+      - ./ai-service/models:/app/models
+      - ./ai-service/artifacts:/app/artifacts
+      - ./ai-service/datasets:/app/datasets
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: heritageai-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/heritageai_db
+      - SPRING_DATASOURCE_USERNAME=heritage_user
+      - SPRING_DATASOURCE_PASSWORD=heritage_secure_pass_123!
+      - AI_SERVICE_URL=http://ai-service:8000
+      - JWT_SECRET=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ai-service:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: heritageai-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
